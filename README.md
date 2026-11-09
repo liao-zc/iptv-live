@@ -28,11 +28,11 @@ https://testingcf.jsdelivr.net/gh/liao-zc/iptv-live@main/IPTV_ALL.m3u
 
 | 来源 | 订阅地址 | 更新时间 |
 | --- | --- | --- |
-| Guovin/iptv-api | <https://guovin.github.io/iptv-api/result.m3u> | 2026-10-12 11:26:19 |
-| Guovin/TV | <https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u> | 2026-08-27 14:06:24 |
-| iptv-org 中国 | <https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u> | 2026-11-07 08:10:07 |
-| iptv-org 台湾 | <https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u> | 2026-11-05 10:19:33 |
-| YanG-1989/m3u | <https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u> | 2026-09-18 18:28:52 |
-| fanmingming/live（IPv6） | <https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u> | 2025-05-09 20:49:35 |
+| Guovin/iptv-api | [打开订阅](https://guovin.github.io/iptv-api/result.m3u) | 2026-10-12 11:26:19 |
+| Guovin/TV | [打开订阅](https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u) | 2026-08-27 14:06:24 |
+| iptv-org 中国 | [打开订阅](https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u) | 2026-11-07 08:10:07 |
+| iptv-org 台湾 | [打开订阅](https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u) | 2026-11-05 10:19:33 |
+| YanG-1989/m3u | [打开订阅](https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u) | 2026-09-18 18:28:52 |
+| fanmingming/live（IPv6） | [打开订阅](https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u) | 2025-05-09 20:49:35 |
 
 上表中的时间均为北京时间，按对应 M3U 文件的最近更新时间记录。

@@ -145,7 +145,7 @@ def ensure_upstream_table(readme: str) -> str:
             "| --- | --- | --- |",
         ]
         rows.extend(
-            f"| {source['name']} | <{source['url']}> | 待核实 |"
+            f"| {source['name']} | [打开订阅]({source['url']}) | 待核实 |"
             for source in UPSTREAMS
         )
         rows.append("")
@@ -188,7 +188,7 @@ def ensure_upstream_table(readme: str) -> str:
     missing = [source for source in UPSTREAMS if source["name"] not in existing_names]
     if missing:
         addition = "".join(
-            f"| {source['name']} | <{source['url']}> | 待核实 |\n"
+            f"| {source['name']} | [打开订阅]({source['url']}) | 待核实 |\n"
             for source in missing
         )
         readme = readme.replace("## 更新说明", addition + "\n## 更新说明", 1)
