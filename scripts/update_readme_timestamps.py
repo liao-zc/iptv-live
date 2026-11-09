@@ -119,8 +119,8 @@ def fetch_upstream_time(source: dict[str, str]) -> str:
 def last_upstream_time(readme: str, name: str) -> str:
     for line in readme.splitlines():
         fields = [field.strip() for field in line.split("|")]
-        if len(fields) >= 6 and fields[1] == name:
-            return fields[4]
+        if len(fields) >= 5 and fields[1] == name:
+            return fields[3]
     return "待核实"
 
 
@@ -128,8 +128,8 @@ def replace_upstream_time(readme: str, name: str, value: str) -> str:
     lines = readme.splitlines(keepends=True)
     for index, line in enumerate(lines):
         fields = line.rstrip("\r\n").split("|")
-        if len(fields) >= 6 and fields[1].strip() == name:
-            fields[4] = f" {value} "
+        if len(fields) >= 5 and fields[1].strip() == name:
+            fields[3] = f" {value} "
             lines[index] = "|".join(fields) + ("\n" if line.endswith("\n") else "")
             return "".join(lines)
     raise ValueError(f"无法更新 README 中的上游时间：{name}")
@@ -141,11 +141,11 @@ def ensure_upstream_table(readme: str) -> str:
         rows = [
             heading,
             "",
-            "| 来源 | 订阅地址 | 上游运行计划 | M3U 文件最近更新时间（北京时间） |",
-            "| --- | --- | --- | --- |",
+            "| 来源 | 订阅地址 | 更新时间 |",
+            "| --- | --- | --- |",
         ]
         rows.extend(
-            f"| {source['name']} | <{source['url']}> | {source['schedule']} | 待核实 |"
+            f"| {source['name']} | <{source['url']}> | 待核实 |"
             for source in UPSTREAMS
         )
         rows.append("")
@@ -158,16 +158,25 @@ def ensure_upstream_table(readme: str) -> str:
         return readme.replace("## 更新说明", block + "## 更新说明", 1)
 
     lines = readme.splitlines(keepends=True)
+    legacy_schedule_table = any(
+        line.startswith("| 来源 |")
+        and any(label in line for label in ("上游运行计划", "上游更新时间"))
+        for line in lines
+    )
     for index, line in enumerate(lines):
-        if line.startswith("| 来源 |") and "M3U 文件最近更新时间" not in line:
-            lines[index] = "| 来源 | 订阅地址 | 上游运行计划 | M3U 文件最近更新时间（北京时间） |\n"
+        if line.startswith("| 来源 |") and line.rstrip("\r\n").split("|")[-2].strip() != "更新时间":
+            lines[index] = "| 来源 | 订阅地址 | 更新时间 |\n"
         elif line.startswith("| ---"):
-            if line.count("|") < 6:
-                lines[index] = "| --- | --- | --- | --- |\n"
-        elif line.startswith("| ") and line.count("|") == 4:
+            if line.count("|") != 4:
+                lines[index] = "| --- | --- | --- |\n"
+        elif line.startswith("| ") and line.count("|") in (4, 5):
             fields = line.rstrip("\r\n").split("|")
-            if len(fields) == 5 and any(fields[1].strip() == source["name"] for source in UPSTREAMS):
-                fields.insert(-1, " 待核实 ")
+            if len(fields) == 6 and any(fields[1].strip() == source["name"] for source in UPSTREAMS):
+                fields.pop(3)
+                lines[index] = "|".join(fields) + "\n"
+            elif len(fields) == 5 and any(fields[1].strip() == source["name"] for source in UPSTREAMS):
+                if legacy_schedule_table:
+                    fields[3] = " 待核实 "
                 lines[index] = "|".join(fields) + "\n"
     readme = "".join(lines)
 
@@ -179,7 +188,7 @@ def ensure_upstream_table(readme: str) -> str:
     missing = [source for source in UPSTREAMS if source["name"] not in existing_names]
     if missing:
         addition = "".join(
-            f"| {source['name']} | <{source['url']}> | {source['schedule']} | 待核实 |\n"
+            f"| {source['name']} | <{source['url']}> | 待核实 |\n"
             for source in missing
         )
         readme = readme.replace("## 更新说明", addition + "\n## 更新说明", 1)
