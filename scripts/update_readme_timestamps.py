@@ -25,6 +25,7 @@ UPSTREAMS = [
         "name": "Guovin/iptv-api",
         "kind": "last_modified",
         "url": "https://guovin.github.io/iptv-api/result.m3u",
+        "schedule": "手动生成；未设置固定定时任务",
     },
     {
         "name": "Guovin/TV",
@@ -32,6 +33,8 @@ UPSTREAMS = [
         "repo": "Guovin/TV",
         "path": "output/result.m3u",
         "ref": "gd",
+        "url": "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u",
+        "schedule": "手动运行；未设置固定定时任务",
     },
     {
         "name": "iptv-org 中国",
@@ -39,6 +42,8 @@ UPSTREAMS = [
         "repo": "iptv-org/iptv",
         "path": "streams/cn.m3u",
         "ref": "master",
+        "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+        "schedule": "每日 08:00（北京时间）",
     },
     {
         "name": "iptv-org 台湾",
@@ -46,6 +51,8 @@ UPSTREAMS = [
         "repo": "iptv-org/iptv",
         "path": "streams/tw.m3u",
         "ref": "master",
+        "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
+        "schedule": "每日 08:00（北京时间）",
     },
     {
         "name": "YanG-1989/m3u",
@@ -53,6 +60,8 @@ UPSTREAMS = [
         "repo": "YanG-1989/m3u",
         "path": "Gather.m3u",
         "ref": "main",
+        "url": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+        "schedule": "未找到公开的固定运行计划",
     },
     {
         "name": "fanmingming/live（IPv6）",
@@ -60,6 +69,8 @@ UPSTREAMS = [
         "repo": "fanmingming/live",
         "path": "tv/m3u/ipv6.m3u",
         "ref": "main",
+        "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+        "schedule": "未找到该 M3U 的固定运行计划",
     },
 ]
 
@@ -110,7 +121,7 @@ def last_upstream_time(readme: str, name: str) -> str:
         fields = [field.strip() for field in line.split("|")]
         if len(fields) >= 6 and fields[1] == name:
             return fields[4]
-    raise ValueError(f"README 中找不到上游行：{name}")
+    return "待核实"
 
 
 def replace_upstream_time(readme: str, name: str, value: str) -> str:
@@ -122,6 +133,84 @@ def replace_upstream_time(readme: str, name: str, value: str) -> str:
             lines[index] = "|".join(fields) + ("\n" if line.endswith("\n") else "")
             return "".join(lines)
     raise ValueError(f"无法更新 README 中的上游时间：{name}")
+
+
+def ensure_upstream_table(readme: str) -> str:
+    heading = "其他直播源订阅入口："
+    if heading not in readme:
+        rows = [
+            heading,
+            "",
+            "| 来源 | 订阅地址 | 上游运行计划 | M3U 文件最近更新时间（北京时间） |",
+            "| --- | --- | --- | --- |",
+        ]
+        rows.extend(
+            f"| {source['name']} | <{source['url']}> | {source['schedule']} | 待核实 |"
+            for source in UPSTREAMS
+        )
+        rows.append("")
+        rows.append(
+            "上游 M3U 时间以对应文件的最近提交时间为准（Guovin/iptv-api 使用文件响应中的最后修改时间），均换算为北京时间；运行计划不代表文件每次都会发生变化。"
+        )
+        block = "\n".join(rows) + "\n\n"
+        if "## 更新说明" not in readme:
+            raise ValueError("README 中找不到更新说明标题")
+        return readme.replace("## 更新说明", block + "## 更新说明", 1)
+
+    lines = readme.splitlines(keepends=True)
+    for index, line in enumerate(lines):
+        if line.startswith("| 来源 |") and "M3U 文件最近更新时间" not in line:
+            lines[index] = "| 来源 | 订阅地址 | 上游运行计划 | M3U 文件最近更新时间（北京时间） |\n"
+        elif line.startswith("| ---"):
+            if line.count("|") < 6:
+                lines[index] = "| --- | --- | --- | --- |\n"
+        elif line.startswith("| ") and line.count("|") == 4:
+            fields = line.rstrip("\r\n").split("|")
+            if len(fields) == 5 and any(fields[1].strip() == source["name"] for source in UPSTREAMS):
+                fields.insert(-1, " 待核实 ")
+                lines[index] = "|".join(fields) + "\n"
+    readme = "".join(lines)
+
+    existing_names = {
+        fields[1].strip()
+        for line in readme.splitlines()
+        if len(fields := line.split("|")) >= 3
+    }
+    missing = [source for source in UPSTREAMS if source["name"] not in existing_names]
+    if missing:
+        addition = "".join(
+            f"| {source['name']} | <{source['url']}> | {source['schedule']} | 待核实 |\n"
+            for source in missing
+        )
+        readme = readme.replace("## 更新说明", addition + "\n## 更新说明", 1)
+    return readme
+
+
+def committed_playlist_time() -> str:
+    result = subprocess.run(
+        ["git", "log", "-1", "--format=%cI", "--", "IPTV_ALL.m3u", "IPTV_ADULT.m3u"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    value = result.stdout.strip()
+    if not value:
+        raise ValueError("Git 历史中找不到 M3U 文件提交时间")
+    return beijing_time(datetime.fromisoformat(value))
+
+
+def ensure_local_timestamp(readme: str, changed: bool) -> str:
+    marker = re.compile(r"本仓库 M3U 文件最近更新时间（北京时间）：\*\*[^*]+\*\*。")
+    value = beijing_time(datetime.now(BEIJING)) if changed else committed_playlist_time()
+    line = f"本仓库 M3U 文件最近更新时间（北京时间）：**{value}**。"
+    if marker.search(readme):
+        if changed:
+            return marker.sub(line, readme, count=1)
+        return readme
+    if "## 更新说明" not in readme:
+        raise ValueError("README 中找不到更新说明标题")
+    return readme.replace("## 更新说明", f"## 更新说明\n\n{line}", 1)
 
 
 def playlist_files_changed() -> bool:
@@ -136,7 +225,9 @@ def playlist_files_changed() -> bool:
 
 
 def refresh_readme(now: datetime | None = None) -> str:
-    readme = README.read_text(encoding="utf-8")
+    readme = ensure_upstream_table(README.read_text(encoding="utf-8"))
+    playlists_changed = playlist_files_changed()
+    readme = ensure_local_timestamp(readme, playlists_changed)
     for source in UPSTREAMS:
         try:
             timestamp = fetch_upstream_time(source)
@@ -149,7 +240,7 @@ def refresh_readme(now: datetime | None = None) -> str:
             )
         readme = replace_upstream_time(readme, source["name"], timestamp)
 
-    if playlist_files_changed():
+    if playlists_changed:
         updated_at = beijing_time(now or datetime.now(BEIJING))
         marker = re.compile(
             r"(本仓库 M3U 文件最近更新时间（北京时间）：\*\*)[^*]+(\*\*。)"
