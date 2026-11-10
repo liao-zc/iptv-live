@@ -4,7 +4,7 @@
 
 本仓库 M3U 文件最近更新时间（北京时间）：**2026-11-10 06:34:01**。
 
-本仓库每小时自动更新一次，计划于北京时间每小时第 17 分启动；GitHub Actions 可能因平台排队而延迟。手动更新请进入 GitHub 仓库的 **Actions → Update IPTV playlist → Run workflow**。
+本仓库每天自动更新一次，计划于北京时间 00:17 启动；GitHub Actions 可能因平台排队而延迟。手动更新请进入 GitHub 仓库的 **Actions → Update IPTV playlist → Run workflow**。
 
 无效频道会暂时注释并继续复测；检测恢复后会自动重新启用。
 
