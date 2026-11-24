@@ -2,7 +2,7 @@
 
 ## 更新说明
 
-本仓库 M3U 文件最近更新时间（北京时间）：**2026-11-24 10:35:49**。
+本仓库 M3U 文件最近更新时间（北京时间）：**2026-11-24 11:38:53**。
 
 当前仓库的 `reports/latest.json` 记录的验证节点为 `mainland-shanghai`（本机手动生成）。自动更新默认使用 GitHub 托管的 `ubuntu-latest`（海外节点），保证每天持续更新；注册大陆 runner 后，把仓库变量 `MAINLAND_RUNNER_READY` 设为 `true`，即可切换为大陆验证。`update-local.ps1` 会先检查出口 IP，不是中国大陆会拒绝执行。
 
@@ -71,7 +71,7 @@ https://testingcf.jsdelivr.net/gh/liao-zc/iptv-live@main/IPTV_ALL.m3u
 | --- | --- | --- |
 | Guovin/iptv-api | [打开订阅](https://guovin.github.io/iptv-api/result.m3u) | 2026-10-12 11:26:19 |
 | Guovin/TV | [打开订阅](https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u) | 2026-08-27 14:06:24 |
-| iptv-org 中国 | [打开订阅](https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u) | 2026-11-18 10:41:19 |
+| iptv-org 中国 | [打开订阅](https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u) | 2026-11-23 08:12:43 |
 | iptv-org 台湾 | [打开订阅](https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u) | 2026-11-05 10:19:33 |
 | YanG-1989/m3u | [打开订阅](https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u) | 2026-09-18 18:28:52 |
 | fanmingming/live（IPv6） | [打开订阅](https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u) | 2025-05-09 20:49:35 |
