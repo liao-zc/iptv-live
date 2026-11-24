@@ -4,9 +4,50 @@
 
 本仓库 M3U 文件最近更新时间（北京时间）：**2026-11-24 10:35:49**。
 
-本仓库每天自动更新一次，计划于北京时间 00:17 启动；GitHub Actions 可能因平台排队而延迟。手动更新请进入 GitHub 仓库的 **Actions → Update IPTV playlist → Run workflow**。
+当前仓库的 `reports/latest.json` 记录的验证节点为 `mainland-shanghai`（本机手动生成）。自动更新默认使用 GitHub 托管的 `ubuntu-latest`（海外节点），保证每天持续更新；注册大陆 runner 后，把仓库变量 `MAINLAND_RUNNER_READY` 设为 `true`，即可切换为大陆验证。`update-local.ps1` 会先检查出口 IP，不是中国大陆会拒绝执行。
 
 无效频道会暂时注释并继续复测；检测恢复后会自动重新启用。
+
+### 验证节点切换
+
+默认（`MAINLAND_RUNNER_READY` 未设置或为 `false`）：使用 `ubuntu-latest`，验证节点为海外，但每天自动更新，`reports/latest.json` 的 `node` 记录为 `github-hosted-overseas`。
+
+要切换到大陆节点：
+
+1. 注册标签为 `self-hosted, linux, x64, mainland` 的 runner，并确认在线；
+2. 在仓库 `Settings → Secrets and variables → Actions → Variables` 新建变量 `MAINLAND_RUNNER_READY`，值为 `true`；
+3. 下一次定时任务或手动触发会在大陆 runner 上运行，`node` 记录为 `mainland-self-hosted`。
+
+如果变量为 `true` 但 runner 不在线，任务会排队；把变量改回 `false` 即可恢复 `ubuntu-latest` 自动更新。
+
+### 本机手动更新（大陆网络）
+
+适合没有大陆 runner、但本机在中国大陆的情况。确认未开启 VPN/代理后，在仓库根目录运行：
+
+```powershell
+.\update-local.ps1
+```
+
+如果系统禁止运行 PowerShell 脚本，可改用：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\update-local.ps1
+```
+
+脚本会先检查出口 IP；如果不是中国大陆（或无法确认），会直接终止，避免用海外节点验证。检查通过后，依次执行单元测试、同步 Guovin 候选源、探测并解码验证、生成 M3U、更新 README 时间戳，最后提交并推送。默认提交信息带 `[skip ci]`，避免 push 后立刻触发默认的海外节点任务，覆盖你刚生成的大陆验证结果。
+
+常用参数：
+
+- `-CheckOnly`：只检查 Python、ffmpeg、ffprobe 和出口 IP，不执行更新。
+- `-NoPush`：只生成文件，不提交、不推送。
+- `-RunCi`：提交后允许 GitHub Actions 触发（默认会跑海外节点，可能覆盖本机大陆验证结果；仅在大陆 runner 在线时建议使用）。
+- `-Node mainland-shanghai`：指定 `reports/latest.json` 中记录的探测节点名称，默认 `mainland-local`。
+- `-AllowNonMainland`：出口 IP 不是/无法确认中国大陆时仍继续（不推荐）。
+- `-Python`、`-Ffprobe`、`-Ffmpeg`：手动指定工具路径；不指定时脚本会自动查找。
+
+需要 Python 3.10+、ffmpeg、ffprobe、git。脚本会自动把 ffprobe/ffmpeg 所在目录加入当前会话的 PATH。
+
+GitHub Actions 的手动入口（**Actions → Update IPTV playlist → Run workflow**）默认在 `ubuntu-latest` 上运行；`MAINLAND_RUNNER_READY=true` 且大陆 runner 在线时，在大陆节点上运行。
 
 ## 使用说明
 

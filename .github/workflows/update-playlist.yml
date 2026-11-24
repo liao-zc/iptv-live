@@ -24,17 +24,23 @@ concurrency:
 
 jobs:
   update:
-    # Validation must run from a mainland-China node. GitHub-hosted runners are
-    # overseas, so this job is pinned to a self-hosted runner with these labels
-    # and must never fall back to ubuntu-latest.
-    runs-on: [self-hosted, linux, x64, mainland]
+    # Prefer a mainland-China self-hosted runner when MAINLAND_RUNNER_READY=true.
+    # Otherwise fall back to a GitHub-hosted runner so the playlist keeps updating.
+    # Issue-triggered runs are limited to the repository owner to protect a
+    # self-hosted runner from untrusted issue content.
+    if: github.event_name != 'issues' || github.event.issue.user.login == github.repository_owner
+    runs-on: ${{ vars.MAINLAND_RUNNER_READY == 'true' && fromJSON('["self-hosted","linux","x64","mainland"]') || fromJSON('["ubuntu-latest"]') }}
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Verify mainland probe toolchain
+      - name: Install probe tools (GitHub-hosted fallback)
+        if: vars.MAINLAND_RUNNER_READY != 'true'
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Verify probe toolchain
         timeout-minutes: 2
         run: |
           python3 --version
@@ -52,7 +58,7 @@ jobs:
       - name: Discover, probe and rank streams
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APTV_PROBE_NODE: mainland-self-hosted
+          APTV_PROBE_NODE: ${{ vars.MAINLAND_RUNNER_READY == 'true' && 'mainland-self-hosted' || 'github-hosted-overseas' }}
         run: |
           success=false
           for attempt in 1 2 3; do
