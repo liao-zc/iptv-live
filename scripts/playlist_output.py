@@ -31,7 +31,7 @@ def write_one(target, items, disabled, sort_key):
         ])
     target.parent.mkdir(parents=True, exist_ok=True)
     temporary = target.with_suffix(target.suffix + ".tmp")
-    temporary.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    temporary.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     temporary.replace(target)
 
 

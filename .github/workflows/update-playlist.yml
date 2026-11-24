@@ -24,20 +24,22 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    # Validation must run from a mainland-China node. GitHub-hosted runners are
+    # overseas, so this job is pinned to a self-hosted runner with these labels
+    # and must never fall back to ubuntu-latest.
+    runs-on: [self-hosted, linux, x64, mainland]
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install FFmpeg
-        timeout-minutes: 7
+      - name: Verify mainland probe toolchain
+        timeout-minutes: 2
         run: |
-          if ! command -v ffprobe >/dev/null 2>&1; then
-            sudo apt-get update -qq -o Acquire::Retries=3 -o Acquire::http::Timeout=20
-            sudo apt-get install -y -qq ffmpeg
-          fi
+          python3 --version
+          ffmpeg -version | head -n 1
+          ffprobe -version | head -n 1
 
       - name: Validate aggregator source
         run: |
@@ -50,7 +52,7 @@ jobs:
       - name: Discover, probe and rank streams
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APTV_PROBE_NODE: github-ubuntu
+          APTV_PROBE_NODE: mainland-self-hosted
         run: |
           success=false
           for attempt in 1 2 3; do

@@ -37,7 +37,7 @@ def main():
         ])
     target.parent.mkdir(exist_ok=True)
     temporary = target.with_suffix(".tmp")
-    temporary.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    temporary.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     temporary.replace(target)
     report = {
         "upstream": url,
@@ -48,7 +48,7 @@ def main():
     }
     report_path = ROOT / "reports" / "upstream-merge.json"
     report_path.parent.mkdir(exist_ok=True)
-    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Guovin candidates={len(candidates)} missing_channels={len(missing)}; all candidates retained for validation")
     return 0
 
