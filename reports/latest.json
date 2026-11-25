@@ -3,8 +3,8 @@
   "generated_at": "2026-11-25T06:31:55.264118+00:00",
   "node": "mainland-shanghai-mobile",
   "candidate_count": 3169,
-  "channel_count": 180,
-  "disabled_channel_count": 2245,
+  "channel_count": 178,
+  "disabled_channel_count": 2247,
   "disabled_channels": [
     "CCTV-3",
     "CCTV-4",
@@ -2250,7 +2250,9 @@
     "YunoRose",
     "YURIALA",
     "zaraxnx",
-    "zhiyao99"
+    "zhiyao99",
+    "TVBS Asia (1080p)",
+    "Guangzhou TV"
   ],
   "channels": [
     {
