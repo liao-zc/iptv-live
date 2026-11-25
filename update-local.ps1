@@ -136,7 +136,10 @@ $isMainland = $false
 try {
     $ipInfo = Invoke-RestMethod -Uri 'https://myip.ipip.net' -TimeoutSec 10
     Write-Host "Egress: $ipInfo"
-    $isMainland = ($ipInfo -match '中国') -and ($ipInfo -notmatch '香港|澳门|台湾')
+    # Use code points to avoid Windows PowerShell 5.1 misreading UTF-8 literals.
+    $mainland = [string]([char]0x4E2D) + [char]0x56FD
+    $excluded = ([string]([char]0x9999) + [char]0x6E2F) + '|' + ([string]([char]0x6FB3) + [char]0x95E8) + '|' + ([string]([char]0x53F0) + [char]0x6E7E)
+    $isMainland = ($ipInfo -match $mainland) -and ($ipInfo -notmatch $excluded)
     if (-not $isMainland) {
         Write-Warning 'Egress IP is not mainland China. Disable VPN/proxy before validating.'
     }
