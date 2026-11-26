@@ -1,6 +1,50 @@
 #EXTM3U x-tvg-url="https://epg.112114.xyz/pp.xml.gz,https://assets.livednow.com/epg.xml"
+#EXTINF:-1 tvg-id="Anal" tvg-name="Anal" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Anal
+http://cdn.adultiptv.net/anal.m3u8
 #EXTINF:-1 tvg-id="Asian" tvg-name="Asian" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Asian
-http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
+http://88.212.7.11/live/test_dorcel_hd_hevc/playlist.m3u8
+#EXTINF:-1 tvg-id="Big Ass" tvg-name="Big Ass" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Big Ass
+http://cdn.adultiptv.net/bigass.m3u8
+#EXTINF:-1 tvg-id="Big Dick" tvg-name="Big Dick" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Big Dick
+http://cdn.adultiptv.net/bigdick.m3u8
+#EXTINF:-1 tvg-id="Big Tits" tvg-name="Big Tits" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Big Tits
+http://cdn.adultiptv.net/bigtits.m3u8
+#EXTINF:-1 tvg-id="Blonde" tvg-name="Blonde" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Blonde
+http://cdn.adultiptv.net/blonde.m3u8
+#EXTINF:-1 tvg-id="Blowjob" tvg-name="Blowjob" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Blowjob
+http://cdn.adultiptv.net/blowjob.m3u8
+#EXTINF:-1 tvg-id="Brunette" tvg-name="Brunette" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Brunette
+http://cdn.adultiptv.net/brunette.m3u8
+#EXTINF:-1 tvg-id="Compilation" tvg-name="Compilation" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Compilation
+http://cdn.adultiptv.net/compilation.m3u8
+#EXTINF:-1 tvg-id="Cuckold" tvg-name="Cuckold" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Cuckold
+http://cdn.adultiptv.net/cuckold.m3u8
+#EXTINF:-1 tvg-id="Fetish" tvg-name="Fetish" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Fetish
+http://cdn.adultiptv.net/fetish.m3u8
+#EXTINF:-1 tvg-id="Gangbang" tvg-name="Gangbang" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Gangbang
+http://cdn.adultiptv.net/gangbang.m3u8
+#EXTINF:-1 tvg-id="Gay" tvg-name="Gay" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Gay
+http://cdn.adultiptv.net/gay.m3u8
+#EXTINF:-1 tvg-id="Hardcore" tvg-name="Hardcore" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Hardcore
+http://cdn.adultiptv.net/hardcore.m3u8
+#EXTINF:-1 tvg-id="Interracial" tvg-name="Interracial" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Interracial
+http://cdn.adultiptv.net/interracial.m3u8
+#EXTINF:-1 tvg-id="Latina" tvg-name="Latina" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Latina
+http://cdn.adultiptv.net/latina.m3u8
+#EXTINF:-1 tvg-id="Lesbian" tvg-name="Lesbian" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Lesbian
+http://cdn.adultiptv.net/lesbian.m3u8
+#EXTINF:-1 tvg-id="Live Cams" tvg-name="Live Cams" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Live Cams
+http://cdn.adultiptv.net/livecams.m3u8
+#EXTINF:-1 tvg-id="MILF" tvg-name="MILF" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",MILF
+http://cdn.adultiptv.net/milf.m3u8
+#EXTINF:-1 tvg-id="Rough" tvg-name="Rough" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Rough
+http://cdn.adultiptv.net/rough.m3u8
+#EXTINF:-1 tvg-id="Russian" tvg-name="Russian" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Russian
+http://cdn.adultiptv.net/russian.m3u8
+#EXTINF:-1 tvg-id="Teen" tvg-name="Teen" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Teen
+http://cdn.adultiptv.net/teen.m3u8
+#EXTINF:-1 tvg-id="Threesome" tvg-name="Threesome" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Threesome
+http://cdn.adultiptv.net/threesome.m3u8
 
 # Disabled channels are retried automatically every run.
 # APTV-DISABLED channel="1good2better" reason="no currently playable candidate"
@@ -303,9 +347,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="Bella_Netty" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Bella_Netty" tvg-name="Bella_Netty" tvg-logo="https://img.strpst.com/thumbs/1724137789/94846776_webp" group-title="成人频道",Bella_Netty
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/94846776/master/94846776.m3u8
-# APTV-DISABLED channel="Big Ass" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Big Ass" tvg-name="Big Ass" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Big Ass
-#DISABLED-URL:http://cdn.adultiptv.net/bigass.m3u8
 # APTV-DISABLED channel="BigassLola" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="BigassLola" tvg-name="BigassLola" tvg-logo="https://img.strpst.com/thumbs/1724137814/150225161_webp" group-title="成人频道",BigassLola
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/150225161/master/150225161.m3u8
@@ -315,15 +356,9 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="BigBoGcup" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="BigBoGcup" tvg-name="BigBoGcup" tvg-logo="https://img.strpst.com/thumbs/1724137878/56269980_webp" group-title="成人频道",BigBoGcup
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/56269980/master/56269980.m3u8
-# APTV-DISABLED channel="Big Dick" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Big Dick" tvg-name="Big Dick" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Big Dick
-#DISABLED-URL:http://cdn.adultiptv.net/bigdick.m3u8
 # APTV-DISABLED channel="Big_SlutNasty" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Big_SlutNasty" tvg-name="Big_SlutNasty" tvg-logo="https://img.strpst.com/thumbs/1724137860/154314790_webp" group-title="成人频道",Big_SlutNasty
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/154314790/master/154314790.m3u8
-# APTV-DISABLED channel="Big Tits" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Big Tits" tvg-name="Big Tits" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Big Tits
-#DISABLED-URL:http://cdn.adultiptv.net/bigtits.m3u8
 # APTV-DISABLED channel="BimBimMup" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="BimBimMup" tvg-name="BimBimMup" tvg-logo="https://img.strpst.com/thumbs/1724137698/140079810_webp" group-title="成人频道",BimBimMup
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/140079810/master/140079810.m3u8
@@ -339,9 +374,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="BlessKisss" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="BlessKisss" tvg-name="BlessKisss" tvg-logo="https://img.strpst.com/thumbs/1724137728/115043134_webp" group-title="成人频道",BlessKisss
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/115043134/master/115043134.m3u8
-# APTV-DISABLED channel="Blonde" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Blonde" tvg-name="Blonde" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Blonde
-#DISABLED-URL:http://cdn.adultiptv.net/blonde.m3u8
 # APTV-DISABLED channel="bombomepimenta" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="bombomepimenta" tvg-name="bombomepimenta" tvg-logo="https://img.strpst.com/thumbs/1724137876/110219824_webp" group-title="成人频道",bombomepimenta
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/110219824/master/110219824.m3u8
@@ -363,9 +395,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="Bright_diamods_054" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Bright_diamods_054" tvg-name="Bright_diamods_054" tvg-logo="https://img.strpst.com/thumbs/1724137710/123429135_webp" group-title="成人频道",Bright_diamods_054
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/123429135/master/123429135.m3u8
-# APTV-DISABLED channel="Brunette" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Brunette" tvg-name="Brunette" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Brunette
-#DISABLED-URL:http://cdn.adultiptv.net/brunette.m3u8
 # APTV-DISABLED channel="Call_me_Ana" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Call_me_Ana" tvg-name="Call_me_Ana" tvg-logo="https://img.strpst.com/thumbs/1724137843/94793698_webp" group-title="成人频道",Call_me_Ana
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/94793698/master/94793698.m3u8
@@ -474,9 +503,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="CocoSecretss" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="CocoSecretss" tvg-name="CocoSecretss" tvg-logo="https://img.strpst.com/thumbs/1724137784/111983528_webp" group-title="成人频道",CocoSecretss
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/111983528/master/111983528.m3u8
-# APTV-DISABLED channel="Compilation" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Compilation" tvg-name="Compilation" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Compilation
-#DISABLED-URL:http://cdn.adultiptv.net/compilation.m3u8
 # APTV-DISABLED channel="ConnieTran" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="ConnieTran" tvg-name="ConnieTran" tvg-logo="https://img.strpst.com/thumbs/1724137715/131282354_webp" group-title="成人频道",ConnieTran
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/131282354/master/131282354.m3u8
@@ -507,9 +533,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="CrystalPatton" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="CrystalPatton" tvg-name="CrystalPatton" tvg-logo="https://img.strpst.com/thumbs/1724137751/152609441_webp" group-title="成人频道",CrystalPatton
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/152609441/master/152609441.m3u8
-# APTV-DISABLED channel="Cuckold" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Cuckold" tvg-name="Cuckold" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Cuckold
-#DISABLED-URL:http://cdn.adultiptv.net/cuckold.m3u8
 # APTV-DISABLED channel="cumfun" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="cumfun" tvg-name="cumfun" tvg-logo="https://img.strpst.com/thumbs/1724137809/96690004_webp" group-title="成人频道",cumfun
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/96690004/master/96690004.m3u8
@@ -747,9 +770,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="Fenix-Luna" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Fenix-Luna" tvg-name="Fenix-Luna" tvg-logo="https://img.strpst.com/thumbs/1724137751/136270665_webp" group-title="成人频道",Fenix-Luna
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/136270665/master/136270665.m3u8
-# APTV-DISABLED channel="Fetish" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Fetish" tvg-name="Fetish" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Fetish
-#DISABLED-URL:http://cdn.adultiptv.net/fetish.m3u8
 # APTV-DISABLED channel="fifteenpoem" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="fifteenpoem" tvg-name="fifteenpoem" tvg-logo="https://img.strpst.com/thumbs/1724137905/84228176_webp" group-title="成人频道",fifteenpoem
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/84228176/master/84228176.m3u8
@@ -783,12 +803,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="Gaby_foz" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Gaby_foz" tvg-name="Gaby_foz" tvg-logo="https://img.strpst.com/thumbs/1724137852/127130825_webp" group-title="成人频道",Gaby_foz
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/127130825/master/127130825.m3u8
-# APTV-DISABLED channel="Gangbang" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Gangbang" tvg-name="Gangbang" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Gangbang
-#DISABLED-URL:http://cdn.adultiptv.net/gangbang.m3u8
-# APTV-DISABLED channel="Gay" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Gay" tvg-name="Gay" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Gay
-#DISABLED-URL:http://cdn.adultiptv.net/gay.m3u8
 # APTV-DISABLED channel="GeileEstelle" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="GeileEstelle" tvg-name="GeileEstelle" tvg-logo="https://img.strpst.com/thumbs/1724137911/71319282_webp" group-title="成人频道",GeileEstelle
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/71319282/master/71319282.m3u8
@@ -942,9 +956,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="India_SexcStripper" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="India_SexcStripper" tvg-name="India_SexcStripper" tvg-logo="https://img.strpst.com/thumbs/1724137894/41232234_webp" group-title="成人频道",India_SexcStripper
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/41232234/master/41232234.m3u8
-# APTV-DISABLED channel="Interracial" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Interracial" tvg-name="Interracial" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Interracial
-#DISABLED-URL:http://cdn.adultiptv.net/interracial.m3u8
 # APTV-DISABLED channel="_in_yan" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="_in_yan" tvg-name="_in_yan" tvg-logo="https://img.strpst.com/thumbs/1724137791/59113609_webp" group-title="成人频道",_in_yan
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/59113609/master/59113609.m3u8
@@ -1179,9 +1190,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="Latiffagodess" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Latiffagodess" tvg-name="Latiffagodess" tvg-logo="https://img.strpst.com/thumbs/1724137818/147570689_webp" group-title="成人频道",Latiffagodess
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/147570689/master/147570689.m3u8
-# APTV-DISABLED channel="Latina" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Latina" tvg-name="Latina" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Latina
-#DISABLED-URL:http://cdn.adultiptv.net/latina.m3u8
 # APTV-DISABLED channel="legsoffice" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="legsoffice" tvg-name="legsoffice" tvg-logo="https://img.strpst.com/thumbs/1724137917/5157321_webp" group-title="成人频道",legsoffice
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/5157321/master/5157321.m3u8
@@ -1251,9 +1259,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="Little_sweet_teens" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Little_sweet_teens" tvg-name="Little_sweet_teens" tvg-logo="https://img.strpst.com/thumbs/1724137744/65029635_webp" group-title="成人频道",Little_sweet_teens
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/65029635/master/65029635.m3u8
-# APTV-DISABLED channel="Live Cams" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Live Cams" tvg-name="Live Cams" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Live Cams
-#DISABLED-URL:http://cdn.adultiptv.net/livecams.m3u8
 # APTV-DISABLED channel="LiyaFrench" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="LiyaFrench" tvg-name="LiyaFrench" tvg-logo="https://img.strpst.com/thumbs/1724137709/107603057_webp" group-title="成人频道",LiyaFrench
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/107603057/master/107603057.m3u8
@@ -1659,9 +1664,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="RosieMoons" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="RosieMoons" tvg-name="RosieMoons" tvg-logo="https://img.strpst.com/thumbs/1724137723/109021050_webp" group-title="成人频道",RosieMoons
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/109021050/master/109021050.m3u8
-# APTV-DISABLED channel="Rough" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Rough" tvg-name="Rough" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Rough
-#DISABLED-URL:http://cdn.adultiptv.net/rough.m3u8
 # APTV-DISABLED channel="RoxiLester" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="RoxiLester" tvg-name="RoxiLester" tvg-logo="https://img.strpst.com/thumbs/1724137748/156219179_webp" group-title="成人频道",RoxiLester
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/156219179/master/156219179.m3u8
@@ -1671,9 +1673,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="RubyAlaska" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="RubyAlaska" tvg-name="RubyAlaska" tvg-logo="https://img.strpst.com/thumbs/1724137715/100302059_webp" group-title="成人频道",RubyAlaska
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/100302059/master/100302059.m3u8
-# APTV-DISABLED channel="Russian" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Russian" tvg-name="Russian" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Russian
-#DISABLED-URL:http://cdn.adultiptv.net/russian.m3u8
 # APTV-DISABLED channel="Sabrina_Grey" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="Sabrina_Grey" tvg-name="Sabrina_Grey" tvg-logo="https://img.strpst.com/thumbs/1724137751/51165337_webp" group-title="成人频道",Sabrina_Grey
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/51165337/master/51165337.m3u8
@@ -1983,9 +1982,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="TayanaJons" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="TayanaJons" tvg-name="TayanaJons" tvg-logo="https://img.strpst.com/thumbs/1724137902/90449345_webp" group-title="成人频道",TayanaJons
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/90449345/master/90449345.m3u8
-# APTV-DISABLED channel="Teen" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Teen" tvg-name="Teen" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Teen
-#DISABLED-URL:http://cdn.adultiptv.net/teen.m3u8
 # APTV-DISABLED channel="TemptingTeaser" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="TemptingTeaser" tvg-name="TemptingTeaser" tvg-logo="https://img.strpst.com/thumbs/1724137751/113748045_webp" group-title="成人频道",TemptingTeaser
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/113748045/master/113748045.m3u8
@@ -2004,9 +2000,6 @@ http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
 # APTV-DISABLED channel="thepeachiestprincesss" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="thepeachiestprincesss" tvg-name="thepeachiestprincesss" tvg-logo="https://img.strpst.com/thumbs/1724137895/125561003_webp" group-title="成人频道",thepeachiestprincesss
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/125561003/master/125561003.m3u8
-# APTV-DISABLED channel="Threesome" reason="no currently playable candidate"
-#DISABLED-EXTINF:-1 tvg-id="Threesome" tvg-name="Threesome" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Threesome
-#DISABLED-URL:http://cdn.adultiptv.net/threesome.m3u8
 # APTV-DISABLED channel="TiaraHills" reason="no currently playable candidate"
 #DISABLED-EXTINF:-1 tvg-id="TiaraHills" tvg-name="TiaraHills" tvg-logo="https://img.strpst.com/thumbs/1724137688/158384789_webp" group-title="成人频道",TiaraHills
 #DISABLED-URL:https://edge-hls.doppiocdn.com/hls/158384789/master/158384789.m3u8
