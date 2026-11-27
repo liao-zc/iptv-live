@@ -176,7 +176,7 @@ catch {
 }
 
 Write-Step 'Result summary'
-$report = Get-Content (Join-Path $RepoRoot 'reports/latest.json') -Raw | ConvertFrom-Json
+$report = Get-Content (Join-Path $RepoRoot 'reports/latest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $enabled = @(Select-String -Path (Join-Path $RepoRoot 'IPTV_ALL.m3u') -Pattern '^#EXTINF').Count
 Write-Host ("node={0} generated_at={1}" -f $report.node, $report.generated_at)
 Write-Host ("channels={0} disabled={1} IPTV_ALL_enabled={2}" -f $report.channel_count, $report.disabled_channel_count, $enabled)
