@@ -2,7 +2,7 @@
 
 ## 更新说明
 
-本仓库 M3U 文件最近更新时间（北京时间）：**2026-11-27 22:16:34**。
+本仓库 M3U 文件最近更新时间（北京时间）：**2026-11-28 08:09:42**。
 
 `reports/latest.json` 会记录本次验证节点：默认是 `github-hosted-overseas`（GitHub 托管 runner，海外节点），设置仓库变量 `MAINLAND_RUNNER_READY=true` 并使用在线的大陆 runner 时为 `mainland-self-hosted`。自动更新默认使用 `ubuntu-latest`，保证每天持续更新；`update-local.ps1` 用于本机大陆网络手动更新，会先检查出口 IP，不是中国大陆会拒绝执行。
 
